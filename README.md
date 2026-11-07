@@ -8,7 +8,7 @@ Independent open-source software. Not made by, affiliated with, or endorsed by A
 
 ## Download
 
-**[Download the latest Windows release](https://github.com/farshad-zamani/apple-music-skip-fix/releases/latest)**
+**[Download the Windows installer](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.0/AppleMusicSkipFix-0.1.0-Setup.exe)** · [Portable ZIP](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.0/AppleMusicSkipFix-0.1.0-Portable.zip) · [All releases](https://github.com/farshad-zamani/apple-music-skip-fix/releases)
 
 - **Setup.exe:** recommended; installs for your Windows user.
 - **Portable.zip:** extract the entire folder, then open `AppleMusicSkipFix.exe`.
@@ -16,6 +16,12 @@ Independent open-source software. Not made by, affiliated with, or endorsed by A
 - Version 0.1 targets **Windows 11 x64** and the **Microsoft Store Apple Music app**. Windows 10, ARM64, iTunes, macOS and third-party players are outside this release's support scope.
 
 The first release is unsigned. Windows may show an unrecognized-publisher notice. Verify the source and SHA-256 checksums; do not disable antivirus to use this tool.
+
+Compare this command's result with the matching filename in [SHA256SUMS.txt](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.0/SHA256SUMS.txt):
+
+```powershell
+Get-FileHash .\AppleMusicSkipFix-0.1.0-Setup.exe -Algorithm SHA256
+```
 
 ![Apple Music Skip Fix — Check](docs/images/check-light.png)
 

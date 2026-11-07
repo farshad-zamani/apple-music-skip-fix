@@ -1,6 +1,6 @@
 # Apple Music Skip Fix
 
-A free Windows assistant for **Apple Music songs that skip without playing**, including previously downloaded tracks.
+A free, open-source Windows assistant by **[cloudtart.com](https://cloudtart.com/)** for **Apple Music songs that skip without playing**, including previously downloaded tracks. Developed by [farshad-zamani on GitHub](https://github.com/farshad-zamani).
 
 Keep your downloads. Protect your library. Refresh device authorization with a guided, reversible workflow.
 
@@ -8,7 +8,7 @@ Independent open-source software. Not made by, affiliated with, or endorsed by A
 
 ## Download
 
-**[Download the Windows installer](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.0/AppleMusicSkipFix-0.1.0-Setup.exe)** · [Portable ZIP](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.0/AppleMusicSkipFix-0.1.0-Portable.zip) · [All releases](https://github.com/farshad-zamani/apple-music-skip-fix/releases)
+**[Download the Windows installer](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.1/AppleMusicSkipFix-0.1.1-Setup.exe)** · [Portable ZIP](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.1/AppleMusicSkipFix-0.1.1-Portable.zip) · [All releases](https://github.com/farshad-zamani/apple-music-skip-fix/releases)
 
 - **Setup.exe:** recommended; installs for your Windows user.
 - **Portable.zip:** extract the entire folder, then open `AppleMusicSkipFix.exe`.
@@ -17,10 +17,10 @@ Independent open-source software. Not made by, affiliated with, or endorsed by A
 
 The first release is unsigned. Windows may show an unrecognized-publisher notice. Verify the source and SHA-256 checksums; do not disable antivirus to use this tool.
 
-Compare this command's result with the matching filename in [SHA256SUMS.txt](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.0/SHA256SUMS.txt):
+Compare this command's result with the matching filename in [SHA256SUMS.txt](https://github.com/farshad-zamani/apple-music-skip-fix/releases/download/v0.1.1/SHA256SUMS.txt):
 
 ```powershell
-Get-FileHash .\AppleMusicSkipFix-0.1.0-Setup.exe -Algorithm SHA256
+Get-FileHash .\AppleMusicSkipFix-0.1.1-Setup.exe -Algorithm SHA256
 ```
 
 ![Apple Music Skip Fix — Check](docs/images/check-light.png)
@@ -110,4 +110,4 @@ See [architecture and safety boundaries](docs/ARCHITECTURE.md), [building a rele
 
 Application source: [MIT](LICENSE). Python, Qt/PySide6 and other bundled components retain their own licenses; see [third-party notices](THIRD_PARTY_NOTICES.md) and the license files in the distribution. Qt libraries are bundled dynamically in the portable directory.
 
-Created by [farshad-zamani](https://github.com/farshad-zamani). Apple and Apple Music are trademarks of their respective owner.
+Apple Music Skip Fix by **[CloudTart — cloudtart.com](https://cloudtart.com/)**. Follow the developer at **[github.com/farshad-zamani](https://github.com/farshad-zamani)**. The same clickable signature appears in the app's persistent footer. Apple and Apple Music are trademarks of their respective owner.

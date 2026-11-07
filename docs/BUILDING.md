@@ -15,7 +15,7 @@ python -m venv .venv
 .\tools\smoke_release.ps1
 ```
 
-Use the complete one-folder distribution. Do not move the executable out of its folder or convert the app to an elevated one-file executable. No UPX compression or paid signing certificate is used for 0.1.0.
+Use the complete one-folder distribution. Do not move the executable out of its folder or convert the app to an elevated one-file executable. No UPX compression or paid signing certificate is used for 0.1.x.
 
 The per-user Inno Setup installer requires no administrator account for installation and does not install a background service. Only the in-app cache helper can request elevation for a specific repair.
 

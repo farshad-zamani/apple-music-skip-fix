@@ -24,4 +24,7 @@ The user explicitly approved a Windows task assistant with a left step rail, cen
 One real repair with preserved downloaded payloads and official reauthorization succeeded. The user subsequently confirmed offline playback. This is evidence from one machine, not a universal success rate. Original personal logs, media, keys, settings and backups must not enter the repository.
 
 ## Release
-Public repository farshad-zamani/apple-music-skip-fix; version 0.1.0; unsigned installer and portable ZIP, SHA-256 checksums and honest test coverage.
+Public repository farshad-zamani/apple-music-skip-fix; current version 0.1.1; unsigned installer and portable ZIP, SHA-256 checksums and honest test coverage.
+
+## Publisher and attribution
+The user owns cloudtart.com and requested a persistent clickable footer signature for that site and the GitHub profile https://github.com/farshad-zamani. Preserve the exact visible domain `cloudtart.com`, the product name Apple Music Skip Fix, and matching publisher attribution in public descriptions and distribution metadata. Do not add tracking or change local recovery locations.

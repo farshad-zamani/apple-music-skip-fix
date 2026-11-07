@@ -8,6 +8,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QGuiApplication, QImage, QPainter
 from PySide6.QtSvg import QSvgRenderer
 from PIL import Image, PngImagePlugin
+from amsf import __version__
 
 root = Path(__file__).resolve().parents[1]
 build = root / "build"
@@ -46,6 +47,6 @@ for path in (root / "docs/images").glob("*.png"):
     with Image.open(path) as source:
         info = PngImagePlugin.PngInfo()
         info.add_text("Origin", "Native Qt screenshot of Apple Music Skip Fix --demo; synthetic data; source: src/amsf/gui.py")
-        info.add_text("Software", "Apple Music Skip Fix 0.1.0 / PySide6; local demo capture")
+        info.add_text("Software", f"Apple Music Skip Fix {__version__} by CloudTart (cloudtart.com) / PySide6; local demo capture")
         source.save(path, pnginfo=info)
 print("Prepared original vector icon and bundled component licenses.")

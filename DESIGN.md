@@ -123,7 +123,7 @@ components:
 
 A calm Windows repair desk, organized around a single recoverable task. The next action is always visible and verification is earned. The approved direction in PRODUCT.md and docs/SURFACE.md supplies this language; this document captures the built system rather than proposing a replacement identity.
 
-This is a native Windows desktop interface built with PySide6 Qt Widgets. A quiet step rail, a clear work area and a persistent action footer carry the workflow. Raspberry marks the current step and primary action; neutral surfaces, ruled facts and Segoe UI keep findings easy to scan. The original music-and-check SVG provides the only illustrated brand mark.
+This is a native Windows desktop interface built with PySide6 Qt Widgets. A quiet step rail, a clear work area and a persistent action footer carry the workflow. Raspberry marks the current step and primary action; neutral surfaces, ruled facts and Segoe UI keep findings easy to scan. The original music-and-check SVG provides the only illustrated brand mark. A separate full-width publisher signature remains visible below the workflow, including when the rail is collapsed.
 
 **Key Characteristics:**
 
@@ -133,7 +133,7 @@ This is a native Windows desktop interface built with PySide6 Qt Widgets. A quie
 - Compact windows scroll their work area while preserving the action footer.
 - Recovery and verification remain explicit, separately labeled states.
 
-**Evidence and limits:** Extracted from src/amsf/gui.py and src/amsf/resources/icon.svg; visually checked against docs/images/check-light.png, result-dark.png, authorize-compact.png and check-200-percent.png. All four PNGs include embedded provenance identifying native Qt demo captures with synthetic data. They establish rendered appearance, not real playback, actual user data or repair efficacy. The finish reviewer reported SHIP for the reviewed UI/finding scope after 42 synthetic tests; that verdict does not establish live adapter, installer or repair behavior. Browser rendering and web design detectors do not apply to this Qt Widgets surface.
+**Evidence and limits:** Extracted from src/amsf/gui.py and src/amsf/resources/icon.svg; visually checked against docs/images/check-light.png, result-dark.png, authorize-compact.png, check-200-percent.png, unresolved.png and restored.png, refreshed for the v0.1.1 publisher signature. All six PNGs include embedded provenance identifying native Qt demo captures with synthetic data. They establish rendered appearance, not real playback, actual user data or repair efficacy. The initial finish reviewer reported SHIP for the reviewed UI/finding scope after 42 synthetic tests; that verdict does not establish live adapter, installer or repair behavior. Browser rendering and web design detectors do not apply to this Qt Widgets surface.
 
 ## Colors
 
@@ -141,9 +141,9 @@ One raspberry family sits within cool neutral light and dark themes. The frontma
 
 ### Primary
 
-- **Repair Raspberry** (`raspberry`): primary button fill in both themes; current-step text and focus/hover borders in light theme.
+- **Repair Raspberry** (`raspberry`): primary button fill in both themes; current-step text, publisher links and focus/hover borders in light theme.
 - **Deep Raspberry** (`raspberry-hover`): the implemented primary hover fill. No separate pressed-state fill is implemented.
-- **Soft Raspberry** (`raspberry-dark-theme`): current-step text, focus/hover borders and progress chunks in dark theme. The primary button retains Repair Raspberry with white text.
+- **Soft Raspberry** (`raspberry-dark-theme`): current-step text, publisher links, focus/hover borders and progress chunks in dark theme. The primary button retains Repair Raspberry with white text.
 - **Mark Raspberry** (`mark-raspberry`): the authored SVG tile. Keep it distinct from the button fill; it belongs to the icon artwork.
 
 ### Neutral
@@ -175,22 +175,24 @@ Segoe UI carries both brand and task copy. The hierarchy is compact and practica
 - **Body** (`body`): facts, instructions, checkbox labels and secondary controls.
 - **Primary action** (`button`): semibold footer action.
 - **Step** (`step`): rail names and descriptions; the current step gains semibold weight.
-- **Caption** (`caption`): brand promise, supporting caveats, compact step indicator and local-file reassurance.
+- **Caption** (`caption`): brand promise, supporting caveats, compact step indicator, local-file reassurance and publisher/version signature.
 - **Technical** (`technical`): local machine-readable detail in a read-only editor.
 
-Labels wrap with Qt word wrapping and use plain text. Most QLabel content is mouse-selectable. Preserve sentence case and the existing English UI; do not replace compact captions with decorative all-caps labels.
+Content labels wrap with Qt word wrapping and use plain text. Publisher controls are flat native QPushButtons with plain-text labels, underlined in the existing caption size. Most content QLabel text is mouse-selectable. Preserve sentence case and the existing English UI; do not replace compact captions with decorative all-caps labels.
 
 ## Layout
 
-The nominal window is 1060 × 760 and the minimum is 680 × 440, measured in Qt logical pixels. The outer layout has zero margins and no gaps between the header, middle area and footer surfaces.
+The nominal window is 1060 × 760 and the minimum is 680 × 440, measured in Qt logical pixels. The outer layout has zero margins and no gaps between the header, middle area and full-width publisher signature. The action footer remains inside the middle area's work column.
 
 The header spans the window. Its margins are 24 horizontally and 16 vertically. A 38 × 38 rendering of the authored SVG sits beside a two-line brand block; the theme selector aligns right. The brand name has a 260 minimum width.
 
-At widths of 900 and above, the left rail is fixed at 228. Its margins are 24 left, 30 top, 20 right and 24 bottom, with 8 between step entries. Recovery reassurance and version/project attribution sit at its bottom. The six stage labels are progress indicators, not clickable navigation.
+At widths of 900 and above, the left rail is fixed at 228. Its margins are 24 left, 30 top, 20 right and 24 bottom, with 8 between step entries. Recovery reassurance sits at its bottom. Version/project attribution lives in the always-visible publisher signature rather than the rail. The six stage labels are progress indicators, not clickable navigation.
 
 Below 900, the rail is hidden and a compact `Step n of 6 · Name` indicator appears above the work area. Its margins are 28 horizontally and 14 at the top. Content margins are 24 on all sides in compact mode. In wide mode they are 36 horizontally and 24 vertically after responsive layout is applied. Content spacing is 18. The initial builder's 30 top margin is superseded by apply_responsive; use the applied values when extending the layout.
 
 The work area is a frameless, widget-resizable QScrollArea. A stretch below the stage content keeps short pages aligned to the top. The 760 × 580 authorization capture visibly scrolls its instructions; the footer stays in place. The footer has 28 horizontal and 18 vertical margins, the restore action on the left when available and the primary action on the right. The primary action has a minimum height of 44. Status text and a 3-high indeterminate progress bar occupy rows above the footer when needed.
+
+Below the entire middle area, the publisher signature spans the window across both rail and work column. It has 24 horizontal and 8 vertical margins, with 8 between items. The left group reads `By cloudtart.com · GitHub`; a stretch separates the right-hand `v<version> · Independent project` label. Word wrapping is disabled for that version label, keeping it on one line. A theme-line top border separates the signature from the workflow. It stays outside the scrolling work area and remains visible in compact mode.
 
 **The Anchored Action Rule.** Keep the primary action in the footer outside the scrolling stage. At small sizes or enlarged DPI, scroll content rather than moving the action below it.
 
@@ -214,11 +216,17 @@ The authored SVG is a raspberry rounded tile with a white music note and a dark 
 
 Buttons are compact and legible, with a 1-pixel border and padding defined in the frontmatter. The footer's single primary button uses Repair Raspberry and white semibold text in both themes. Secondary buttons use the theme field background and normal interface text. In the stage area, secondary actions expand to the available layout width; footer buttons remain content-sized.
 
-Hover changes the secondary background to the theme surface and the border to its accent. Primary hover uses the darker raspberry fill. Focus for buttons, combos and checkboxes is an explicit 2-pixel theme-accent border. Disabled buttons use muted text, theme surface and line border, including the primary button. There is no custom active/pressed animation.
+Hover changes the secondary background to the theme surface and the border to its accent. Primary hover uses the darker raspberry fill. Focus for standard action buttons, combos and checkboxes is an explicit 2-pixel theme-accent border; publisher buttons use the 1-pixel treatment described below. Disabled buttons use muted text, theme surface and line border, including the primary button. There is no custom active/pressed animation.
 
 ### Progress rail and compact indicator
 
 Each rail entry includes its number, stage name and a short description. Current uses the theme active fill, accent text and semibold weight; earlier entries use normal ink; upcoming entries use muted text. Accessible names explicitly say current step, complete or upcoming. At the compact breakpoint the rail is replaced by the single textual step indicator, preserving stage context.
+
+### Publisher signature
+
+The persistent signature shows `By cloudtart.com · GitHub` at the left and the running version plus `Independent project` at the right. Keep the exact visible domain `cloudtart.com`. Its flat native QPushButtons use 12-pixel Segoe UI, underlining and the current theme accent; surrounding copy uses the caption color. Each publisher button has a transparent background and 1-pixel border, 2 vertical / 3 horizontal padding and a 3-pixel corner radius. Hover changes the background to the theme surface and the border to the accent; focus uses a 1-pixel accent border. No separate pressed appearance is defined.
+
+Each publisher button has a single native Tab stop, StrongFocus, a pointing-hand cursor and AutoDefault enabled for Return activation. Both have explicit accessible names, the accessible description `Opens in your default web browser.` and destination tooltips. Each clicked handler opens its fixed canonical URL, `https://cloudtart.com/` or `https://github.com/farshad-zamani`, through QDesktopServices. These are user-triggered browser actions implemented as native buttons. Keep this attribution separate from the repair action footer so it remains visible when the step rail collapses and the work area scrolls.
 
 ### Fact rows and status
 

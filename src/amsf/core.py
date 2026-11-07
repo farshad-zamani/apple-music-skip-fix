@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Callable
 
 from defusedxml.ElementTree import iterparse
+from . import __version__
 
 PAYLOADS = {".frag", ".initfrag", ".m4p", ".m4v", ".m4a", ".mp3", ".flac", ".wav", ".aac"}
 CODES = ("-11800", "-42812", "-42829", "-45061", "-45054", "7513", "7505")
@@ -335,7 +336,7 @@ def shareable_report(session: Session, system: dict, diagnostic: dict) -> dict:
         return value if re.fullmatch(r"\d+(?:\.\d+){0,4}", value) else "unknown"
     state = session.data.get("state")
     method = verification.get("method")
-    return {"application": "Apple Music Skip Fix", "version": "0.1.0", "schema": 1,
+    return {"application": "Apple Music Skip Fix", "version": __version__, "schema": 1,
             "windows_build": version(system.get("build", "unknown")),
             "apple_music_version": version(system.get("version", "unknown")),
             "error_codes": {code: int(diagnostic.get("codes", {}).get(code, 0)) for code in CODES},

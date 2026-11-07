@@ -27,10 +27,13 @@ function Test-DemoExecutable([string]$Path) {
     if ($process.ExitCode -ne 0) { throw "Synthetic packaged demo failed: $($process.ExitCode)" }
 }
 
-$portable = Join-Path $ArtifactsRoot 'AppleMusicSkipFix-0.1.0-Portable.zip'
-$setup = Join-Path $ArtifactsRoot 'AppleMusicSkipFix-0.1.0-Setup.exe'
+$version = [regex]::Match((Get-Content -LiteralPath (Join-Path $root 'src\amsf\__init__.py') -Raw), '__version__ = "(\d+\.\d+\.\d+)"').Groups[1].Value
+if (-not $version) { throw 'Application version is unavailable.' }
+$portable = Join-Path $ArtifactsRoot "AppleMusicSkipFix-$version-Portable.zip"
+$setup = Join-Path $ArtifactsRoot "AppleMusicSkipFix-$version-Setup.exe"
+$checksumPattern = '^([a-f0-9]{64})  (AppleMusicSkipFix-' + [regex]::Escape($version) + '-(Portable\.zip|Setup\.exe))$'
 foreach ($line in Get-Content -LiteralPath (Join-Path $ArtifactsRoot 'SHA256SUMS.txt')) {
-    if ($line -notmatch '^([a-f0-9]{64})  (AppleMusicSkipFix-0\.1\.0-(Portable\.zip|Setup\.exe))$') { throw 'Unexpected checksum entry.' }
+    if ($line -notmatch $checksumPattern) { throw 'Unexpected checksum entry.' }
     if ((Get-FileHash -LiteralPath (Join-Path $ArtifactsRoot $Matches[2]) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Matches[1]) { throw 'Artifact hash mismatch.' }
 }
 Expand-Archive -LiteralPath $portable -DestinationPath (Join-Path $qaRoot 'portable')

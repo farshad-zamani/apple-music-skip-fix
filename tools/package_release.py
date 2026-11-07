@@ -2,13 +2,15 @@
 import hashlib
 from pathlib import Path
 import shutil
+from amsf import __version__
 
 root = Path(__file__).resolve().parents[1]
 dist = root / "dist"
 shutil.copy2(root / "LICENSE", dist / "AppleMusicSkipFix/LICENSE.txt")
 shutil.copy2(root / "THIRD_PARTY_NOTICES.md", dist / "AppleMusicSkipFix/THIRD_PARTY_NOTICES.md")
-shutil.make_archive(str(dist / "AppleMusicSkipFix-0.1.0-Portable"), "zip", dist, "AppleMusicSkipFix")
-files = [dist / "AppleMusicSkipFix-0.1.0-Portable.zip", dist / "AppleMusicSkipFix-0.1.0-Setup.exe"]
+shutil.copy2(root / "README.md", dist / "AppleMusicSkipFix/README.md")
+shutil.make_archive(str(dist / f"AppleMusicSkipFix-{__version__}-Portable"), "zip", dist, "AppleMusicSkipFix")
+files = [dist / f"AppleMusicSkipFix-{__version__}-Portable.zip", dist / f"AppleMusicSkipFix-{__version__}-Setup.exe"]
 lines = []
 for p in files:
     h = hashlib.sha256()

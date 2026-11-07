@@ -4,13 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apple-music-skip-fix"
-version = "0.1.0"
-description = "A preservation-first Windows repair assistant for Apple Music track skipping."
+version = "0.1.1"
+description = "Apple Music Skip Fix by CloudTart (cloudtart.com): a free Windows assistant for downloaded songs that skip."
 readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
-authors = [{name = "farshad-zamani"}]
+authors = [{name = "CloudTart (cloudtart.com)"}, {name = "farshad-zamani"}]
+keywords = ["apple-music", "windows-11", "downloaded-songs", "track-skipping", "authorization-repair", "cloudtart"]
 dependencies = ["PySide6-Essentials==6.12.0", "defusedxml==0.7.1"]
+
+[project.urls]
+Homepage = "https://cloudtart.com/"
+Repository = "https://github.com/farshad-zamani/apple-music-skip-fix"
+Author = "https://github.com/farshad-zamani"
+Issues = "https://github.com/farshad-zamani/apple-music-skip-fix/issues"
+Releases = "https://github.com/farshad-zamani/apple-music-skip-fix/releases"
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "ruff>=0.12", "pyinstaller>=6.16,<7", "pillow>=11"]

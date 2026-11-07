@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-07T09:01:05.402144Z",
+  "generatedAt": "2026-11-07T09:31:59.472114Z",
   "title": "Design System: Apple Music Skip Fix",
   "extensions": {
     "colorMeta": {
@@ -284,7 +284,7 @@
       },
       "caption": {
         "displayName": "Supporting caption",
-        "purpose": "Caveats, compact progress and local-file reassurance."
+        "purpose": "Caveats, compact progress, local-file reassurance and persistent publisher/version attribution."
       },
       "technical": {
         "displayName": "Technical detail",
@@ -370,11 +370,18 @@
       "description": "HTML preview of the native status QLabel above the footer. Message text communicates the state; tint does not declare success.",
       "html": "<div class=\"ds-status\">A saved repair session was found. Continue below, or restore its previous cache.</div>",
       "css": ".ds-status{background:#F8E9EE;color:#202735;padding:12px 28px;font:14px \"Segoe UI\",sans-serif}"
+    },
+    {
+      "name": "Publisher signature",
+      "kind": "custom",
+      "description": "HTML preview of the persistent native QFrame signature with flat QPushButtons. Each native publisher control has one Tab stop, StrongFocus, AutoDefault Return activation and a fixed canonical URL click handler. The running version stays on one line; Qt/Windows owns shipping behavior.",
+      "html": "<footer class=\"ds-signature\"><span>By</span><button type=\"button\" class=\"ds-publisher-link\" data-url=\"https://cloudtart.com/\" aria-label=\"Open cloudtart.com, the developer website\" aria-description=\"Opens in your default web browser.\" title=\"https://cloudtart.com/\">cloudtart.com</button><span>&middot;</span><button type=\"button\" class=\"ds-publisher-link\" data-url=\"https://github.com/farshad-zamani\" aria-label=\"Open farshad-zamani on GitHub\" aria-description=\"Opens in your default web browser.\" title=\"https://github.com/farshad-zamani\">GitHub</button><span class=\"ds-signature-version\">v0.1.1 &middot; Independent project</span></footer>",
+      "css": ".ds-signature{display:flex;align-items:center;gap:8px;padding:8px 24px;border-top:1px solid #D7DCE5;background:#FFFFFF;color:#566174;font:12px \"Segoe UI\",sans-serif}.ds-publisher-link{font:inherit;background:transparent;padding:2px 3px;border:1px solid transparent;border-radius:3px;color:#B22B47;text-decoration:underline;cursor:pointer}.ds-publisher-link:hover{background:#F4F5F8;border-color:#B22B47}.ds-publisher-link:focus-visible{outline:none;border:1px solid #B22B47}.ds-signature-version{margin-left:auto;white-space:nowrap}"
     }
   ],
   "narrative": {
     "northStar": "The Windows Repair Desk",
-    "overview": "A calm Windows repair desk, organized around a single recoverable task. The next action is always visible and verification is earned. The approved direction in PRODUCT.md and docs/SURFACE.md supplies this language; this document captures the built system rather than proposing a replacement identity.\n\nThis is a native Windows desktop interface built with PySide6 Qt Widgets. A quiet step rail, a clear work area and a persistent action footer carry the workflow. Raspberry marks the current step and primary action; neutral surfaces, ruled facts and Segoe UI keep findings easy to scan. The original music-and-check SVG provides the only illustrated brand mark.",
+    "overview": "A calm Windows repair desk, organized around a single recoverable task. The next action is always visible and verification is earned. The approved direction in PRODUCT.md and docs/SURFACE.md supplies this language; this document captures the built system rather than proposing a replacement identity.\n\nThis is a native Windows desktop interface built with PySide6 Qt Widgets. A quiet step rail, a clear work area and a persistent action footer carry the workflow. Raspberry marks the current step and primary action; neutral surfaces, ruled facts and Segoe UI keep findings easy to scan. The original music-and-check SVG provides the only illustrated brand mark. A separate full-width publisher signature remains visible below the workflow, including when the rail is collapsed.",
     "keyCharacteristics": [
       "Six named stages with one primary action in the footer.",
       "Neutral light and dark themes with restrained raspberry emphasis.",

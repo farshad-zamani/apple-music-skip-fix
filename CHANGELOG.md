@@ -1,4 +1,12 @@
-# Apple Music Skip Fix 0.1.0
+# Apple Music Skip Fix 0.1.1
+
+- Added a persistent **By cloudtart.com · GitHub** footer with keyboard-accessible website and developer-profile links.
+- Matched CloudTart publisher attribution across the Windows executable, installer, Python metadata and project documentation.
+- Updated public download links and screenshot captures; recovery and authorization behavior is unchanged.
+
+[CloudTart — cloudtart.com](https://cloudtart.com/) · [farshad-zamani on GitHub](https://github.com/farshad-zamani)
+
+## Apple Music Skip Fix 0.1.0
 
 First public beta for Windows 11 x64 and Microsoft Store Apple Music.
 

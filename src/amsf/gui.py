@@ -13,7 +13,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFileDialog, 
                              QLabel, QMainWindow, QMessageBox, QPlainTextEdit, QProgressBar, QPushButton,
                              QScrollArea, QVBoxLayout, QWidget, QInputDialog)
 
-from . import __version__
+from . import __version__, WEBSITE_URL, GITHUB_PROFILE_URL
 from .core import (PlaybackCheck, SafetyError, Session, compare_inventory, protect,
                    shareable_report, validate_backup)
 from . import windows
@@ -159,7 +159,6 @@ class MainWindow(QMainWindow):
             self.step_labels.append(item)
         nav.addStretch()
         nav.addWidget(text("Recovery files stay\non your computer.", "caption"))
-        nav.addWidget(text("v" + __version__ + " · Independent project", "caption"))
         middle.addWidget(self.rail)
         body = QWidget()
         body_layout = QVBoxLayout(body)
@@ -203,7 +202,38 @@ class MainWindow(QMainWindow):
         body_layout.addWidget(footer)
         middle.addWidget(body, 1)
         outer.addLayout(middle, 1)
+        signature = QFrame()
+        signature.setObjectName("signature")
+        attribution = QHBoxLayout(signature)
+        attribution.setContentsMargins(24, 8, 24, 8)
+        attribution.setSpacing(8)
+        attribution.addWidget(text("By", "caption"))
+        self.website_link = self.brand_link("cloudtart.com", WEBSITE_URL, "Open cloudtart.com, the developer website")
+        self.github_link = self.brand_link("GitHub", GITHUB_PROFILE_URL, "Open farshad-zamani on GitHub")
+        attribution.addWidget(self.website_link)
+        attribution.addWidget(text("·", "caption"))
+        attribution.addWidget(self.github_link)
+        attribution.addStretch()
+        version_caption = text("v" + __version__ + " · Independent project", "caption")
+        version_caption.setWordWrap(False)
+        attribution.addWidget(version_caption)
+        outer.addWidget(signature)
         self.show_stage(0)
+
+    @staticmethod
+    def brand_link(label: str, url: str, accessible_name: str) -> QPushButton:
+        link = QPushButton(label)
+        link.setFlat(True)
+        link.setAutoDefault(True)
+        link.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+        link.setCursor(Qt.CursorShape.PointingHandCursor)
+        link.setAccessibleName(accessible_name)
+        link.setAccessibleDescription("Opens in your default web browser.")
+        link.setToolTip(url)
+        link.clicked.connect(lambda: QDesktopServices.openUrl(QUrl(url)))
+        link.setProperty("brandUrl", url)
+        link.setObjectName("brandLink")
+        return link
 
     def set_theme(self, choice):
         self.theme = choice
@@ -219,6 +249,11 @@ class MainWindow(QMainWindow):
             QFrame#header,QFrame#footer {{border:0;background:{c['bg']};}}
             QFrame#header {{border-bottom:1px solid {c['line']};}}
             QFrame#footer {{border-top:1px solid {c['line']};}}
+            QFrame#signature {{border-top:1px solid {c['line']};}}
+            QPushButton#brandLink {{background:transparent;color:{c['accent']};font-size:12px;
+                text-decoration:underline;border:1px solid transparent;border-radius:3px;padding:2px 3px;}}
+            QPushButton#brandLink:hover {{background:{c['surface']};border-color:{c['accent']};}}
+            QPushButton#brandLink:focus {{border:1px solid {c['accent']};}}
             QFrame#rail,QFrame#rail QLabel {{background:{c['surface']};}}
             QLabel#brand {{font-size:17px;font-weight:600;}}
             QLabel#caption {{font-size:12px;color:{c['muted']};}}

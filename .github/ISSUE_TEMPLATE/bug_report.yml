@@ -1,0 +1,17 @@
+name: Playback or app problem
+description: Report a problem using only sanitized information
+body:
+  - type: markdown
+    attributes:
+      value: "Do not upload private backups, .pb files, library databases, credentials, raw Apple logs, account screenshots or song lists. Use Save sanitized report."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened and at which step?
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Sanitized report (optional)
+      render: json

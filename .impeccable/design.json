@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T09:01:05.402144Z",
+  "title": "Design System: Apple Music Skip Fix",
+  "extensions": {
+    "colorMeta": {
+      "raspberry": {
+        "role": "primary",
+        "displayName": "Repair Raspberry",
+        "tonalRamp": [
+          "oklch(15% 0.17050 14.23)",
+          "oklch(26% 0.17050 14.23)",
+          "oklch(38% 0.17050 14.23)",
+          "oklch(49% 0.17050 14.23)",
+          "oklch(61% 0.17050 14.23)",
+          "oklch(72% 0.17050 14.23)",
+          "oklch(84% 0.17050 14.23)",
+          "oklch(95% 0.17050 14.23)"
+        ]
+      },
+      "raspberry-hover": {
+        "role": "primary",
+        "displayName": "Deep Raspberry",
+        "tonalRamp": [
+          "oklch(15% 0.15291 13.79)",
+          "oklch(26% 0.15291 13.79)",
+          "oklch(38% 0.15291 13.79)",
+          "oklch(49% 0.15291 13.79)",
+          "oklch(61% 0.15291 13.79)",
+          "oklch(72% 0.15291 13.79)",
+          "oklch(84% 0.15291 13.79)",
+          "oklch(95% 0.15291 13.79)"
+        ]
+      },
+      "raspberry-dark-theme": {
+        "role": "primary",
+        "displayName": "Soft Raspberry",
+        "tonalRamp": [
+          "oklch(15% 0.13077 7.47)",
+          "oklch(26% 0.13077 7.47)",
+          "oklch(38% 0.13077 7.47)",
+          "oklch(49% 0.13077 7.47)",
+          "oklch(61% 0.13077 7.47)",
+          "oklch(72% 0.13077 7.47)",
+          "oklch(84% 0.13077 7.47)",
+          "oklch(95% 0.13077 7.47)"
+        ]
+      },
+      "light-background": {
+        "role": "neutral",
+        "displayName": "Light Paper",
+        "tonalRamp": [
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(38% 0.00000 0.00)",
+          "oklch(49% 0.00000 0.00)",
+          "oklch(61% 0.00000 0.00)",
+          "oklch(72% 0.00000 0.00)",
+          "oklch(84% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
+        ]
+      },
+      "light-surface": {
+        "role": "neutral",
+        "displayName": "Cool Mist",
+        "tonalRamp": [
+          "oklch(15% 0.00413 271.37)",
+          "oklch(26% 0.00413 271.37)",
+          "oklch(38% 0.00413 271.37)",
+          "oklch(49% 0.00413 271.37)",
+          "oklch(61% 0.00413 271.37)",
+          "oklch(72% 0.00413 271.37)",
+          "oklch(84% 0.00413 271.37)",
+          "oklch(95% 0.00413 271.37)"
+        ]
+      },
+      "light-ink": {
+        "role": "neutral",
+        "displayName": "Slate Ink",
+        "tonalRamp": [
+          "oklch(15% 0.02802 263.94)",
+          "oklch(26% 0.02802 263.94)",
+          "oklch(38% 0.02802 263.94)",
+          "oklch(49% 0.02802 263.94)",
+          "oklch(61% 0.02802 263.94)",
+          "oklch(72% 0.02802 263.94)",
+          "oklch(84% 0.02802 263.94)",
+          "oklch(95% 0.02802 263.94)"
+        ]
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "Slate Caption",
+        "tonalRamp": [
+          "oklch(15% 0.03348 261.36)",
+          "oklch(26% 0.03348 261.36)",
+          "oklch(38% 0.03348 261.36)",
+          "oklch(49% 0.03348 261.36)",
+          "oklch(61% 0.03348 261.36)",
+          "oklch(72% 0.03348 261.36)",
+          "oklch(84% 0.03348 261.36)",
+          "oklch(95% 0.03348 261.36)"
+        ]
+      },
+      "light-line": {
+        "role": "neutral",
+        "displayName": "Light Rule",
+        "tonalRamp": [
+          "oklch(15% 0.01345 262.38)",
+          "oklch(26% 0.01345 262.38)",
+          "oklch(38% 0.01345 262.38)",
+          "oklch(49% 0.01345 262.38)",
+          "oklch(61% 0.01345 262.38)",
+          "oklch(72% 0.01345 262.38)",
+          "oklch(84% 0.01345 262.38)",
+          "oklch(95% 0.01345 262.38)"
+        ]
+      },
+      "light-active": {
+        "role": "neutral",
+        "displayName": "Raspberry Wash",
+        "tonalRamp": [
+          "oklch(15% 0.01751 355.12)",
+          "oklch(26% 0.01751 355.12)",
+          "oklch(38% 0.01751 355.12)",
+          "oklch(49% 0.01751 355.12)",
+          "oklch(61% 0.01751 355.12)",
+          "oklch(72% 0.01751 355.12)",
+          "oklch(84% 0.01751 355.12)",
+          "oklch(95% 0.01751 355.12)"
+        ]
+      },
+      "dark-background": {
+        "role": "neutral",
+        "displayName": "Night Paper",
+        "tonalRamp": [
+          "oklch(15% 0.01254 264.28)",
+          "oklch(26% 0.01254 264.28)",
+          "oklch(38% 0.01254 264.28)",
+          "oklch(49% 0.01254 264.28)",
+          "oklch(61% 0.01254 264.28)",
+          "oklch(72% 0.01254 264.28)",
+          "oklch(84% 0.01254 264.28)",
+          "oklch(95% 0.01254 264.28)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Raised Night",
+        "tonalRamp": [
+          "oklch(15% 0.01602 264.26)",
+          "oklch(26% 0.01602 264.26)",
+          "oklch(38% 0.01602 264.26)",
+          "oklch(49% 0.01602 264.26)",
+          "oklch(61% 0.01602 264.26)",
+          "oklch(72% 0.01602 264.26)",
+          "oklch(84% 0.01602 264.26)",
+          "oklch(95% 0.01602 264.26)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Pale Ink",
+        "tonalRamp": [
+          "oklch(15% 0.00414 271.37)",
+          "oklch(26% 0.00414 271.37)",
+          "oklch(38% 0.00414 271.37)",
+          "oklch(49% 0.00414 271.37)",
+          "oklch(61% 0.00414 271.37)",
+          "oklch(72% 0.00414 271.37)",
+          "oklch(84% 0.00414 271.37)",
+          "oklch(95% 0.00414 271.37)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Pale Caption",
+        "tonalRamp": [
+          "oklch(15% 0.02037 260.17)",
+          "oklch(26% 0.02037 260.17)",
+          "oklch(38% 0.02037 260.17)",
+          "oklch(49% 0.02037 260.17)",
+          "oklch(61% 0.02037 260.17)",
+          "oklch(72% 0.02037 260.17)",
+          "oklch(84% 0.02037 260.17)",
+          "oklch(95% 0.02037 260.17)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "tonalRamp": [
+          "oklch(15% 0.02442 260.11)",
+          "oklch(26% 0.02442 260.11)",
+          "oklch(38% 0.02442 260.11)",
+          "oklch(49% 0.02442 260.11)",
+          "oklch(61% 0.02442 260.11)",
+          "oklch(72% 0.02442 260.11)",
+          "oklch(84% 0.02442 260.11)",
+          "oklch(95% 0.02442 260.11)"
+        ]
+      },
+      "dark-field": {
+        "role": "neutral",
+        "displayName": "Night Field",
+        "tonalRamp": [
+          "oklch(15% 0.01934 264.24)",
+          "oklch(26% 0.01934 264.24)",
+          "oklch(38% 0.01934 264.24)",
+          "oklch(49% 0.01934 264.24)",
+          "oklch(61% 0.01934 264.24)",
+          "oklch(72% 0.01934 264.24)",
+          "oklch(84% 0.01934 264.24)",
+          "oklch(95% 0.01934 264.24)"
+        ]
+      },
+      "dark-active": {
+        "role": "neutral",
+        "displayName": "Raspberry Shade",
+        "tonalRamp": [
+          "oklch(15% 0.03619 350.47)",
+          "oklch(26% 0.03619 350.47)",
+          "oklch(38% 0.03619 350.47)",
+          "oklch(49% 0.03619 350.47)",
+          "oklch(61% 0.03619 350.47)",
+          "oklch(72% 0.03619 350.47)",
+          "oklch(84% 0.03619 350.47)",
+          "oklch(95% 0.03619 350.47)"
+        ]
+      },
+      "mark-raspberry": {
+        "role": "primary",
+        "displayName": "Mark Raspberry",
+        "tonalRamp": [
+          "oklch(15% 0.17892 13.99)",
+          "oklch(26% 0.17892 13.99)",
+          "oklch(38% 0.17892 13.99)",
+          "oklch(49% 0.17892 13.99)",
+          "oklch(61% 0.17892 13.99)",
+          "oklch(72% 0.17892 13.99)",
+          "oklch(84% 0.17892 13.99)",
+          "oklch(95% 0.17892 13.99)"
+        ]
+      },
+      "mark-ink": {
+        "role": "neutral",
+        "displayName": "Mark Ink",
+        "tonalRamp": [
+          "oklch(15% 0.02398 204.73)",
+          "oklch(26% 0.02398 204.73)",
+          "oklch(38% 0.02398 204.73)",
+          "oklch(49% 0.02398 204.73)",
+          "oklch(61% 0.02398 204.73)",
+          "oklch(72% 0.02398 204.73)",
+          "oklch(84% 0.02398 204.73)",
+          "oklch(95% 0.02398 204.73)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Stage headline",
+        "purpose": "One semibold task heading per native stage."
+      },
+      "title": {
+        "displayName": "Brand and subheading",
+        "purpose": "Compact brand name and in-page task sections."
+      },
+      "intro": {
+        "displayName": "Stage introduction",
+        "purpose": "Muted explanation below the task heading."
+      },
+      "body": {
+        "displayName": "Interface body",
+        "purpose": "Facts, instructions, checkbox labels and secondary controls."
+      },
+      "button": {
+        "displayName": "Primary action",
+        "purpose": "Semibold footer action."
+      },
+      "step": {
+        "displayName": "Progress step",
+        "purpose": "Rail stage name and description; current state gains semibold weight."
+      },
+      "caption": {
+        "displayName": "Supporting caption",
+        "purpose": "Caveats, compact progress and local-file reassurance."
+      },
+      "technical": {
+        "displayName": "Technical detail",
+        "purpose": "Read-only local detail, shown on request."
+      }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "compact-rail-collapse",
+        "value": "900px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary footer action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "HTML preview of the native QPushButton primary variant; the shipping control stays in the persistent Qt footer.",
+      "html": "<button class=\"ds-primary\">Check my setup</button>",
+      "css": ".ds-primary{background:#B22B47;color:#FFFFFF;border:1px solid #B22B47;border-radius:7px;padding:10px 15px;font:600 14px \"Segoe UI\",sans-serif;min-height:44px;box-sizing:border-box}.ds-primary:hover{background:#97213B}.ds-primary:focus-visible{border:2px solid #B22B47}.ds-primary:disabled{color:#566174;background:#F4F5F8;border-color:#D7DCE5}"
+    },
+    {
+      "name": "Light secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary-light",
+      "description": "HTML preview of a light-theme secondary QPushButton, used for recovery and contextual actions.",
+      "html": "<button class=\"ds-secondary-light\">Restore previous cache</button>",
+      "css": ".ds-secondary-light{background:#FFFFFF;color:#202735;border:1px solid #D7DCE5;border-radius:7px;padding:10px 15px;font:14px \"Segoe UI\",sans-serif}.ds-secondary-light:hover{background:#F4F5F8;border-color:#B22B47}.ds-secondary-light:focus-visible{border:2px solid #B22B47}.ds-secondary-light:disabled{color:#566174;background:#F4F5F8;border-color:#D7DCE5}"
+    },
+    {
+      "name": "Dark secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary-dark",
+      "description": "HTML preview of a dark-theme secondary QPushButton; the softer accent belongs to borders and current-step text.",
+      "html": "<button class=\"ds-secondary-dark\">Open my recovery folder</button>",
+      "css": ".ds-secondary-dark{background:#2B303A;color:#F2F3F6;border:1px solid #3F4754;border-radius:7px;padding:10px 15px;font:14px \"Segoe UI\",sans-serif}.ds-secondary-dark:hover{background:#22262E;border-color:#F1879D}.ds-secondary-dark:focus-visible{border:2px solid #F1879D}.ds-secondary-dark:disabled{color:#B7BFCC;background:#22262E;border-color:#3F4754}"
+    },
+    {
+      "name": "Theme selector",
+      "kind": "input",
+      "refersTo": "theme-field-dark",
+      "description": "HTML preview of a dark QComboBox. Windows/Qt owns the shipping popup, arrow and keyboard behavior.",
+      "html": "<select class=\"ds-theme\" aria-label=\"Color theme\"><option>System theme</option><option>Light</option><option selected>Dark</option></select>",
+      "css": ".ds-theme{background:#2B303A;color:#F2F3F6;padding:7px 12px;border:1px solid #3F4754;border-radius:6px;min-width:105px;font:14px \"Segoe UI\",sans-serif}.ds-theme:focus-visible{border:2px solid #F1879D}.ds-theme option:checked{background:#412B35;color:#F2F3F6}"
+    },
+    {
+      "name": "Current step in progress rail",
+      "kind": "nav",
+      "refersTo": "step-current-light",
+      "description": "HTML preview of non-clickable Qt step labels. The native rail collapses below 900 logical pixels.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Repair progress\"><div class=\"ds-step\" aria-current=\"step\">1 &nbsp; Check<br>&nbsp;&nbsp;&nbsp;&nbsp; Understand the<br>&nbsp;&nbsp;&nbsp;&nbsp; skipping</div><div class=\"ds-upcoming\">2 &nbsp; Protect<br>&nbsp;&nbsp;&nbsp;&nbsp; Keep a way back</div></nav>",
+      "css": ".ds-rail{background:#F4F5F8;width:228px;padding:30px 20px 24px 24px;box-sizing:border-box;font:13px \"Segoe UI\",sans-serif}.ds-step{background:#F8E9EE;color:#B22B47;border-radius:8px;padding:13px 10px;font-weight:600}.ds-upcoming{color:#566174;padding:13px 10px;margin-top:8px}"
+    },
+    {
+      "name": "Ruled fact row",
+      "kind": "custom",
+      "refersTo": "fact-row",
+      "description": "HTML preview of a plain-text QLabel fact row with a bottom rule, not a clickable card.",
+      "html": "<div class=\"ds-fact\">Your control &nbsp;?&nbsp; Review findings before any repair</div>",
+      "css": ".ds-fact{background:#FFFFFF;color:#202735;padding:10px 0;border-bottom:1px solid #D7DCE5;font:14px \"Segoe UI\",sans-serif}"
+    },
+    {
+      "name": "Explicit confirmation",
+      "kind": "input",
+      "description": "HTML preview of native QCheckBox spacing. Its check glyph is browser-owned here and Qt/Windows-owned in the app; there is no credential input.",
+      "html": "<label class=\"ds-confirm\"><input class=\"ds-checkbox\" type=\"checkbox\">My previously downloaded songs skip without playing</label>",
+      "css": ".ds-confirm{display:flex;align-items:center;gap:10px;padding:5px 0;background:#FFFFFF;color:#202735;font:14px \"Segoe UI\",sans-serif}.ds-checkbox{width:18px;height:18px;flex:0 0 18px;margin:0}.ds-confirm:has(.ds-checkbox:focus-visible){border:2px solid #B22B47}"
+    },
+    {
+      "name": "Technical disclosure",
+      "kind": "custom",
+      "refersTo": "technical-detail",
+      "description": "Interactive HTML translation of the Qt toggle button plus initially hidden read-only QPlainTextEdit. Example detail is synthetic.",
+      "html": "<details class=\"ds-details\"><summary class=\"ds-detail-toggle\">View technical details</summary><pre class=\"ds-technical\">{\n  \"log_files_read\": 2,\n  \"codes\": {\"-42812\": 8}\n}</pre></details>",
+      "css": ".ds-details{font:14px \"Segoe UI\",sans-serif;color:#202735}.ds-detail-toggle{list-style:none;cursor:pointer;background:#FFFFFF;border:1px solid #D7DCE5;border-radius:7px;padding:10px 15px;text-align:center}.ds-detail-toggle::-webkit-details-marker{display:none}.ds-detail-toggle:hover{background:#F4F5F8;border-color:#B22B47}.ds-detail-toggle:focus-visible{border:2px solid #B22B47}.ds-technical{background:#F4F5F8;color:#202735;border:1px solid #D7DCE5;border-radius:6px;padding:8px;max-height:130px;overflow:auto;font:12px Consolas,monospace;white-space:pre-wrap}"
+    },
+    {
+      "name": "Recovery status strip",
+      "kind": "custom",
+      "description": "HTML preview of the native status QLabel above the footer. Message text communicates the state; tint does not declare success.",
+      "html": "<div class=\"ds-status\">A saved repair session was found. Continue below, or restore its previous cache.</div>",
+      "css": ".ds-status{background:#F8E9EE;color:#202735;padding:12px 28px;font:14px \"Segoe UI\",sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Windows Repair Desk",
+    "overview": "A calm Windows repair desk, organized around a single recoverable task. The next action is always visible and verification is earned. The approved direction in PRODUCT.md and docs/SURFACE.md supplies this language; this document captures the built system rather than proposing a replacement identity.\n\nThis is a native Windows desktop interface built with PySide6 Qt Widgets. A quiet step rail, a clear work area and a persistent action footer carry the workflow. Raspberry marks the current step and primary action; neutral surfaces, ruled facts and Segoe UI keep findings easy to scan. The original music-and-check SVG provides the only illustrated brand mark.",
+    "keyCharacteristics": [
+      "Six named stages with one primary action in the footer.",
+      "Neutral light and dark themes with restrained raspberry emphasis.",
+      "Ruled fact rows, open spacing and expandable local technical detail.",
+      "Compact windows scroll their work area while preserving the action footer.",
+      "Recovery and verification remain explicit, separately labeled states."
+    ],
+    "rules": [
+      {
+        "name": "The State Is Text Rule",
+        "body": "Always label current, complete, unresolved and restored states in words. Accent, background and disabled styling reinforce those distinctions.",
+        "section": "colors"
+      },
+      {
+        "name": "The Anchored Action Rule",
+        "body": "Keep the primary action in the footer outside the scrolling stage. At small sizes or enlarged DPI, scroll content rather than moving the action below it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Desk Rule",
+        "body": "Use tonal separation and rules for ordinary structure; preserve the open work area without inventing floating card containers.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the six named stages and keep one primary footer action visible while the work area scrolls.",
+      "**Do** use the existing light/dark token assignments, including the fixed raspberry primary fill and the softer dark-theme accent.",
+      "**Do** preserve native Qt controls, visible keyboard focus, wrapped copy and the compact step indicator.",
+      "**Do** keep authorization, playback progress, audible confirmation, offline testing and restored-cache results separately labeled.",
+      "**Do** retain synthetic-data notices and embedded provenance when sharing demo screenshots.",
+      "**Do** use the existing authored vector mark and keep technical detail collapsed until requested."
+    ],
+    "donts": [
+      "**Don't** replace the approved Windows assistant with a website, mobile screen or decorative card dashboard.",
+      "**Don't** add shadows, gradients, hover lift or decorative animation to the flat visual system.",
+      "**Don't** make rail labels behave like unrestricted stage navigation.",
+      "**Don't** display credentials in the assistant or imply that opening Apple Music proves authorization or playback.",
+      "**Don't** present synthetic screenshot outcomes or the UI review verdict as proof of a live repair or a universal success rate.",
+      "**Don't** reuse historical playback confirmations as current evidence after restoring the previous cache."
+    ]
+  }
+}
